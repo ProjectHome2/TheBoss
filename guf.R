@@ -6,4 +6,3 @@ ggplot(home, aes(x=as.factor(Postnr), y=as.integer(Liggetid), colour = Boligtils
 
 ggplot(home, aes(x=as.integer(Boligareal), y=as.integer(Kontantpris), colour = Boligtilstand)) + geom_point()
 
-2+2
