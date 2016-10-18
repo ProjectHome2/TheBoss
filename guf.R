@@ -65,3 +65,39 @@ ggplot(home, aes(x=as.factor(NumberOfBedrooms), y=Price)) + geom_point() #x is a
 ggplot(home, aes(x=Price, fill = as.factor(Levels))) + geom_histogram(bins = 100) + geom_vline(xintercept = mean(home$Price))
 
 
+
+## Log Y
+#These are linear
+ggplot(home, aes(x=LivingArea, y=log(Price))) + geom_point()
+ggplot(home, aes(x=Age, y=log(Price))) + geom_point() #Might be good
+
+#Might be linear
+ggplot(home, aes(x=SalesPeriod, y=log(Price))) + geom_point() #Make a bar plot maybe
+ggplot(home, aes(x=BasementArea, y=log(Price))) + geom_point()
+ggplot(home, aes(x=GroundArea, y=log(Price))) + geom_point()
+ggplot(home, aes(x=ConstructionYear, y=log(Price))) + geom_point()
+
+
+## Log X
+#These are linear
+ggplot(home, aes(x=log(LivingArea), y=Price)) + geom_point()
+ggplot(home, aes(x=log(Age), y=Price)) + geom_point() #Might be good
+
+#Might be linear
+ggplot(home, aes(x=log(SalesPeriod), y=Price)) + geom_point() #Make a bar plot maybe
+ggplot(home, aes(x=log(BasementArea), y=Price)) + geom_point()
+ggplot(home, aes(x=log(GroundArea), y=Price)) + geom_point()
+ggplot(home, aes(x=log(ConstructionYear), y=Price)) + geom_point()
+
+
+## Log both
+#These are linear
+ggplot(home, aes(x=log(LivingArea), y=log(Price))) + geom_point()
+ggplot(home, aes(x=log(Age), y=log(Price))) + geom_point() #Might be good
+
+#Might be linear
+ggplot(home, aes(x=log(SalesPeriod), y=log(Price))) + geom_point() #Make a bar plot maybe
+ggplot(home, aes(x=log(BasementArea), y=log(Price))) + geom_point()
+ggplot(home, aes(x=log(GroundArea), y=log(Price))) + geom_point()
+ggplot(home, aes(x=log(ConstructionYear), y=log(Price))) + geom_point()
+
